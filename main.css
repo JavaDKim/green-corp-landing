@@ -3,11 +3,22 @@ body {
   color: #213053;
   margin: 0;
 }
+@keyframes rotation{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+	position: sticky;
+  top: 0;
+  background-color: #fff;
 }
 .header__logo {
   height: 30px;
@@ -39,6 +50,8 @@ button {
 .about__sun-image {
   width: 100px;
   height: 100px;
+	animation: rotation 10s linear infinite;
+	position: absolute;
 }
 .about {
   display: flex;
