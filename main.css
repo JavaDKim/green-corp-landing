@@ -177,6 +177,12 @@ footer{
 .footer__links a{
 	margin-bottom: 15px;
 }
+.fa-chevron-right{
+	font-size: 15px;
+}
+.animate__fadeInLeft, .animate__fadeInRight{
+	animation-duration: 2s;
+}
 @media (max-width: 1024px) {
 	.about {
 			padding: 115px 20px;
