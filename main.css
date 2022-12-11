@@ -182,6 +182,7 @@ footer{
 }
 .animate__fadeInLeft, .animate__fadeInRight{
 	animation-duration: 2s;
+	
 }
 @media (max-width: 1024px) {
 	.about {
