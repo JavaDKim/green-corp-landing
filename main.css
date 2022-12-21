@@ -184,19 +184,21 @@ footer{
 	animation-duration: 2s;
 	
 }
-.futures{
+/* begin block Особенности-features */
+.features{
 	background-color: #fff;
-	padding: 60px 115px 60px 115px;	
+	padding: 115px 60px;	
 }
 .cards{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	padding: 35px 40px 25px 40px;
+
 	grid-column-gap: 50px;
 }
 .card{
 	border: 1px solid #D9E4E6;
 	border-radius: 5px;
+	padding: 35px 40px 25px 40px;
 }
 .card p{
 	font-size: 16px;
@@ -223,14 +225,13 @@ footer{
 .fa-chart-line{
 	color: #22a030;
 }
-
 .features__border{
 	margin: 50px 0 50px;
 	border: 1px solid #E6EAF4;
 }
 .features__feedback{
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 }
 .features__feedback-left{
 	margin-right: 10px;
@@ -245,7 +246,7 @@ footer{
 }
 .features__feedback-right{
 	display:flex;
-	text-align: center;
+	justify-content: center;
 }
 .features__box{
 	padding: 30px 40px 25px 40px;
@@ -253,7 +254,7 @@ footer{
 	border-radius: 25px;
 }
 .features__box h3{
-	margin: 0px 0px 20px;
+	margin-right: 20px;
 	font-size: 48px;
 }
 .features__savings-box{
@@ -277,44 +278,46 @@ footer{
 }
 .promo{
 	display: flex;
-	flex-direction: row;
-	align-items: center;
+	justify-content: space-evenly;
 }
 .promo__right{
 	background-color: #dd5f26;
-	padding: 160px 60px 160px;
+	padding: 160px 60px;
 } 
 .promo__right__card{
 	background-color: #fff;
-	padding: 30px 40px 30px;
+	padding: 30px 40px;
 	font-size: 20px;
 	line-height: 22px;
 	font-weight: 500;
 	border-radius: 25px;
-}
+	}
 .promo__right__card p{
 	opacity: 0.8;
 }
 .dotter::before{
 	content: "";
-	font-size: 10px;
-	font-weight: 100;
-	padding: 0px 5px 0px;
-	background-color: #ec6b29;
-	border-radius: 50%;
-  vertical-align: middle;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ec6b29;
   margin-right: 10px;
 }
 .promo__right__button{
 	background-color: #107b1c;
 	margin-top: 20px;
 	font-size: 18px;
-	padding: 15px 30px 15px;
+	padding: 15px 30px;
 	font-weight: 600;
 }
 .promo__right__button i{
 	font-size: 15px;
 	margin-left: 5px;
+}
+.promo__right__button{
+	display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 1024px) {
@@ -338,31 +341,6 @@ footer{
 }
 /* Мобильные устройства */
 @media (max-width: 720px) {
-	.promo{
-	 flex-direction: column-reverse;
-	}
-	.promo__right{
-		padding: 50px 10px 50px;
-	} 
-	
-	.promo__image{
-		height: 500px;
-		width: 100%;
-	}
-	.features__savings-box{
-	margin-bottom: 30px;
-	}
-	.features__box h3{
-		font-size: 36px;
-	}
-	.features__feedback-right{
-		display:flex;
-		flex-direction: column;
-	}
-	.cards{
-		grid-template-columns: auto;
-	}
-	
 	header {
 			padding: 10px;
 	}
@@ -409,9 +387,9 @@ footer{
 	.footer__container {
 		flex-direction: column;
 	}
-	.futures{
+	.features{
 		background-color: #fff;
-		padding: 10px 50px 10px 50px;	
+		padding: 50px 10px;	
 	}
 	.features__feedback{
 		display: flex;
@@ -423,4 +401,29 @@ footer{
 	.features__feedback-left h2{
 		font-size: 36px;
 	}
+	.promo{
+		flex-direction: column-reverse;
+	 }
+	 .promo__right{
+		 padding: 50px 10px 50px;
+	 } 
+	 
+	 .promo__image{
+		 height: 500px;
+		 width: 100%;
+	 }
+	 .features__savings-box{
+		 margin-right: 0px;
+		 margin-bottom: 30px;
+	 }
+	 .features__box h3{
+		 font-size: 36px;
+	 }
+	 .features__feedback-right{
+		 flex-direction: column;
+		 justify-content: normal;
+	 }
+	 .cards{
+		 grid-template-columns: auto;
+	 }
 }
