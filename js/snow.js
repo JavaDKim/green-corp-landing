@@ -44,17 +44,17 @@ class SnowFlake {
     //цвет снежинки
     this.colSnow = colorSnowflake[genMinMax(0, colorSnowflake.length - 1)];
     //длина луча снежинки от середины
-    this.lenRay = genMinMax(3, 8);
+    this.lenRay = genMinMax(5, 15);
     //толщина лучей снежинки
     this.weightRay = genMinMax(1, 2);
     //поворот снежинки
-    this.angel = genMinMax(0, 3);
+    this.angel = genMinMax(0, 50);
     //задаем положение снежинки
     this.px = genMinMax(this.lenRay, this.canvasSnow.width - this.lenRay);
     this.py = genMinMax(this.lenRay, this.canvasSnow.height - this.lenRay);
 
-    this.velocity = genMinMax(10, 40);
-    this.movementX = genMinMax(-4, 4) / this.velocity;
+    this.velocity = genMinMax(3, 10);
+    this.movementX = genMinMax(-4, 10) / this.velocity;
     this.movementY = genMinMax(1, 20) / this.velocity;
   }
   resize() {
