@@ -136,8 +136,16 @@ class CanvasAnimatedSnow {
           ySin(snowElem.py, el, snowElem.lenRay, snowElem.angel).toFixed(2)
         );
         this.ctx.stroke();
+        if (this.canvasSnow.width / this.canvasSnow.height > 1) {
+          this.dprX = this.dpr;
+          this.dprY = this.dpr;
+        } else {
+          this.dprX = this.dpr;
+          this.dprY = this.dpr / this.dpr;
+        }
+        this.ctx.setTransform(this.dprX, 0, 0, this.dprY, 0, 0);
 
-        this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+        //this.ctx.setTransform(1, 0, 0, 1, 0, 0);
       });
     });
 
