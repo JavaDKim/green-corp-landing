@@ -390,7 +390,9 @@ footer {
   .form {
     padding: 50px 10px;
   }
-
+  .snow {
+    height: 100%;
+  }
   .form h1 {
     font-size: 36px;
   }
