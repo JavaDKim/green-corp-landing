@@ -77,7 +77,15 @@ class CanvasBackground {
       this.ctx.arc(0, 0, bubble.size, 0, 2 * Math.PI);
       this.ctx.fillStyle = "rgba(" + bubble.color + "," + bubble.alpha + ")";
       this.ctx.fill();
-      this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+      //this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+      if (this.width / this.height > 1) {
+        this.dprX = this.dpr;
+        this.dprY = this.dpr;
+      } else {
+        this.dprX = this.dpr;
+        this.dprY = this.dpr / this.dpr;
+      }
+      this.ctx.setTransform(this.dprX, 0, 0, this.dprY, 0, 0);
     });
     requestAnimationFrame(this.animate.bind(this));
   }
