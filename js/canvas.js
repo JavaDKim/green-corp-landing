@@ -66,7 +66,6 @@ class CanvasBackground {
     for (let i = 0; i < BUBBLE_DENSITY; i++) {
       this.bubblesList.push(new Bubble(this.canvas));
     }
-    console.log(this.bubblesList);
   }
   animate() {
     this.ctx.clearRect(0, 0, this.canvas.clientWidth, this.canvas.clientHeight);

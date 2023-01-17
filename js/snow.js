@@ -111,7 +111,6 @@ class CanvasAnimatedSnow {
       // подгоняем размер буфера отрисовки под размер HTML-элемента
       this.canvasSnow.width = disWidth;
       this.canvasSnow.height = disHeight;
-      console.log(this.canvasSnow.width, this.canvasSnow.height);
     }
   }
   generateBubbles() {
