@@ -1,4 +1,4 @@
-const INCREASE_NUMBER_ANIMATION_SPEED = 50;
+const INCREASE_NUMBER_ANIMATION_SPEED = 40;
 function increaseNumberAnimationStep(i, elementCount, endNumber) {
   if (i <= endNumber) {
     if (i === endNumber) {
@@ -7,7 +7,7 @@ function increaseNumberAnimationStep(i, elementCount, endNumber) {
       elementCount.innerText = i;
       //console.log(i);
     }
-    i++;
+    i = i + 100;
 
     setTimeout(
       increaseNumberAnimationStep,
