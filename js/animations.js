@@ -8,9 +8,13 @@ function increaseNumberAnimationStep(i, elementCount, endNumber) {
       //console.log(i);
     }
     i++;
+
     setTimeout(
-      increaseNumberAnimationStep(i, elementCount, endNumber),
-      INCREASE_NUMBER_ANIMATION_SPEED
+      increaseNumberAnimationStep,
+      INCREASE_NUMBER_ANIMATION_SPEED,
+      i,
+      elementCount,
+      endNumber
     );
   }
 }
