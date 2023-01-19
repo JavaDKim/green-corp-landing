@@ -25,3 +25,25 @@ function initIncreaseNumberAnimation() {
   increaseNumberAnimationStep(begin, elementC, end);
 }
 initIncreaseNumberAnimation();
+// раздел по выбору select со значением "другое" и всплывающем текстовым полем
+document
+  .querySelector("#budget")
+  .addEventListener("change", function handleSelectChange(event) {
+    if (event.target.value === "other") {
+      // Должны добавить еще одно текстовое поле
+      let formContainer = document.createElement("div");
+      formContainer.classList.add("form__group", "form__other-input");
+      let input = document.createElement("input");
+      input.placeholder = "Введите ваш вариант";
+      input.type = "text";
+      formContainer.appendChild(input);
+      document
+        .querySelector(".form form")
+        .insertBefore(formContainer, document.querySelector(".form__submit"));
+    }
+    const otherInput = document.querySelector(".form__other-input");
+    if (event.target.value !== "other" && Boolean(otherInput)) {
+      // Удаляем ранее добавленное текстовое поле, если оно есть в DOM
+      document.querySelector(".form form").removeChild(otherInput);
+    }
+  });
