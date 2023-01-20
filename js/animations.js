@@ -24,7 +24,7 @@ function initIncreaseNumberAnimation() {
   const elementC = document.querySelector(".features__clients-count");
   increaseNumberAnimationStep(begin, elementC, end);
 }
-initIncreaseNumberAnimation();
+//initIncreaseNumberAnimation();
 // раздел по выбору select со значением "другое" и всплывающем текстовым полем
 document
   .querySelector("#budget")
@@ -47,3 +47,24 @@ document
       document.querySelector(".form form").removeChild(otherInput);
     }
   });
+// раздел по анимации шапки
+let animationInited = false;
+function updateScroll() {
+  if (window.scrollY > 0) {
+    document.querySelector("header").classList.add("header__scrolled");
+  } else {
+    document.querySelector("header").classList.remove("header__scrolled");
+  }
+  // Запуск анимации увеличения числа
+  let windowBottomPosition = window.scrollY + window.innerHeight;
+  let countElementPosition = document.querySelector(
+    ".features__clients-count"
+  ).offsetTop;
+  console.log(windowBottomPosition, countElementPosition);
+
+  if (windowBottomPosition >= countElementPosition && !animationInited) {
+    animationInited = true;
+    initIncreaseNumberAnimation();
+  }
+}
+window.addEventListener("scroll", updateScroll);
