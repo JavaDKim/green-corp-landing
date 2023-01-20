@@ -60,7 +60,6 @@ function updateScroll() {
   let countElementPosition = document.querySelector(
     ".features__clients-count"
   ).offsetTop;
-  console.log(windowBottomPosition, countElementPosition);
 
   if (windowBottomPosition >= countElementPosition && !animationInited) {
     animationInited = true;
