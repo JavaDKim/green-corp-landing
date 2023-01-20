@@ -54,6 +54,7 @@ function updateScroll() {
     document.querySelector("header").classList.add("header__scrolled");
   } else {
     document.querySelector("header").classList.remove("header__scrolled");
+    animationInited = false;
   }
   // Запуск анимации увеличения числа
   let windowBottomPosition = window.scrollY + window.innerHeight;
